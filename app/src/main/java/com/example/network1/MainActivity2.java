@@ -25,8 +25,8 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         recyclerView=findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List<Photo> PhotoList = new ArrayList<>();
-        photoAdapter = new PhotoAdapter(PhotoList);
+        List<Photo> photoList = new ArrayList<>();
+        photoAdapter = new PhotoAdapter(photoList);
         recyclerView.setAdapter(photoAdapter);
 
         Retrofit retrofit=new Retrofit.Builder()
