@@ -67,9 +67,7 @@ public class MainActivity3 extends AppCompatActivity {
 
 
             if (result != null) {
-
-                List<Photo> photoList = parseJsonToPhotoList(result);
-
+                parseJsonToPhotoList(result);
             }
         }
 
