@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> {
@@ -36,6 +37,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
          holder.titleTextView.setText(Photo.getTitle());
          holder.idTextView.setText(String.valueOf(Photo.getId()));
          Picasso.get().load(Photo.getThumbnailUrl()).into(holder.thumbnailImageView);
+         Log.e("e", ""+photoList.size());
     }
 
     @Override

@@ -46,9 +46,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     public void run() {
                         tvMessage.setText("Image downloaded");
                         imgAndroid.setImageBitmap(bitmap);
-                        Log.e("e","Bit map "+bitmap);
                     }
                 });
+
             }
         });
         myThread.start();

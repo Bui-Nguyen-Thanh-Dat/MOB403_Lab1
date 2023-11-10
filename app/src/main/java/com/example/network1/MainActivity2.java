@@ -29,6 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
         photoAdapter = new PhotoAdapter(photoList);
         recyclerView.setAdapter(photoAdapter);
 
+        //Call Api
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("https://jsonplaceholder.typicode.com/photos/")
                 .addConverterFactory(GsonConverterFactory.create())
