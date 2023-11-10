@@ -22,7 +22,7 @@ import java.util.List;
 public class MainActivity3 extends AppCompatActivity {
     private RecyclerView recyclerView;
     private PhotoAdapter photoAdapter;
-    List<Photo> photoList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,10 +64,10 @@ public class MainActivity3 extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            // Xử lý dữ liệu đã lấy được ở đây
+
 
             if (result != null) {
-                // Ví dụ: Chuyển đổi dữ liệu JSON thành đối tượng Photo
+
                 List<Photo> photoList = parseJsonToPhotoList(result);
 
             }
@@ -77,13 +77,13 @@ public class MainActivity3 extends AppCompatActivity {
     };
 
     public List<Photo> parseJsonToPhotoList(String json) {
-        photoList = new ArrayList<>();
+        List<Photo> photoList = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(json);
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                // Đọc các thuộc tính từ jsonObject và tạo đối tượng Photo
+
                 int albumId=jsonObject.getInt("albumId");
                 int id = jsonObject.getInt("id");
                 String url = jsonObject.getString("url");
